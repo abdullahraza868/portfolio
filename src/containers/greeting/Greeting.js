@@ -20,6 +20,13 @@ export default function Greeting() {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
+              <div className="profile-picture-container">
+                <img
+                  src={greeting.profilePicture}
+                  alt="Profile"
+                  className="profile-picture"
+                />
+              </div>
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
@@ -36,13 +43,14 @@ export default function Greeting() {
               >
                 {greeting.subTitle}
               </p>
+              
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
                   <a
-                    href={require("./resume.pdf")}
+                    href={require("./AbdullahResume.pdf")}
                     download="Resume.pdf"
                     className="download-link-button"
                   >
